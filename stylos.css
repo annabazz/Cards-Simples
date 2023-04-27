@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+  background-color:  #dbbef5;  
+
+}
+
+
+/*--implicito--grid general */
+
+.container{
+    margin-top: 50px;
+    background-color: #dbbef5;
+    width: 100%;
+    height: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+}
+
+/*--propiedades de las cards */
+.card-1{
+    background-color:white ;
+}
+
+.card-2{
+    background-color: rgb(1, 16, 1) ;
+    grid-column: 1/2;
+    grid-row: 1;
+}
+
+.card-3{
+    background-color: white ;
+}
+
+.card-4{
+    background-color: rgb(1, 16, 1) ;
+   
+}
+
+.card-contenedor {
+    /* card-generales*/
+    width: 400px;
+    border-radius: 20px 20px;
+    padding: 10px 5px;
+    height: 300px;
+    /* grids*/
+    display: grid;
+    grid-template-columns: 20% repeat(2, 1fr) auto;
+    grid-template-rows: auto 1fr 25px ;
+    grid-template-areas:
+    "icon      h2     h2      img"
+    " .       h3       h3     img"
+     "p        p      .     logo"
+    ;
+}
+
+.img{
+       grid-area: img;
+       justify-self: center;
+       border-radius: 25px;
+      
+}
+
+.logo{
+    grid-area: logo;
+    place-self: end;
+}
+h2{
+    grid-area: h2;
+    justify-self: center;
+    justify-self: end;
+}
+p{
+    grid-area: p;
+    align-self: end;
+    justify-self: right;
+}
+
+h3{
+   grid-area: h3;
+   justify-self: right;
+ align-self: center;
+   
+}
+
+.icon{
+    grid-area: icon;
+    justify-self: start;
+    
+}
+
+.bk-2{
+    color: white;
+}
+
+.bk-txt{
+    color: rgb(242, 242, 10);
+    
+}
+
+.card-2 .img{
+    
+    justify-self: right;
+    align-self: start;
+}
+
+
+
